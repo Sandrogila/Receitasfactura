@@ -46,9 +46,9 @@ fun RecipeListScreen(viewModel: RecipeViewModel,
                 },
                 actions = {
                     IconButton(onClick = {
-                        authViewModel.logout() // Chama o logout no ViewModel
+                        authViewModel.logout()
                         navController.navigate("login") {
-                            popUpTo("home") { inclusive = true } // Remove a tela Home da pilha de navegação
+                            popUpTo("home") { inclusive = true }
                         }
                     }) {
                         Icon(
