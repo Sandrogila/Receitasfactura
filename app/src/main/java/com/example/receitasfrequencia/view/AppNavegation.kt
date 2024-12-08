@@ -50,7 +50,7 @@ fun AppNavigation(database: AppDatabase) {
         }
 
         composable("home") {
-            RecipeListScreen(viewModel = recipeViewModel, navController = navController)
+            RecipeListScreen(viewModel = recipeViewModel, authViewModel = authViewModel,navController = navController)
         }
 
         // Tela para adicionar uma nova receita

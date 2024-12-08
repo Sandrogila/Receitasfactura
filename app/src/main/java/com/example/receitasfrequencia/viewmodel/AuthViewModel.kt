@@ -84,6 +84,11 @@ class AuthViewModel(
             }
         }
     }
+    fun logout() {
+        viewModelScope.launch {
+            _authState.value = AuthState.Unauthenticated
+        }
+    }
 
     // Login com validações
     fun login(email: String, password: String) {
