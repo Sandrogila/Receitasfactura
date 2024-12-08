@@ -104,7 +104,7 @@ fun RecipeFormScreen(
                 .padding(padding)
                 .background(
                     brush = Brush.verticalGradient(
-                        colors = listOf(Color(0xFF0072FF), Color(0xFF00C6FF))
+                        colors = listOf(Color(0xFF6D96C9), Color(0xFF5790A1))
                     )
                 )
         ) {

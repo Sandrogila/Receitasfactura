@@ -42,7 +42,7 @@ class AuthViewModel(
         return passwordRegex.matcher(password).matches()
     }
 
-    // Registrar usuário com validações mais robustas
+    // Registrar usuário com validaçoes mais robustas
     fun registerUser(username: String, email: String, password: String) {
         viewModelScope.launch {
             when {
@@ -137,8 +137,6 @@ class AuthViewModel(
                 return@launch
             }
 
-            // Aqui você poderia implementar a lógica de envio de e-mail de recuperação de senha
-            // Por exemplo, gerar um token de redefinição de senha, enviar por e-mail, etc.
             _authState.value = AuthState.PasswordResetRequested
         }
     }

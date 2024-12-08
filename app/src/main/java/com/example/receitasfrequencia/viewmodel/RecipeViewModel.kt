@@ -71,11 +71,11 @@ class RecipeViewModel(
                     ingredients = ingredients,
                     category = category,
                     instructions = instructions,
-                    userId = user.id // Usar o ID do usuário atual
+                    userId = user.id
                 )
 
                 recipeDao.insertRecipe(recipe)
-                loadUserRecipes() // Recarrega a lista de receitas
+                loadUserRecipes()
             } catch (e: Exception) {
                 e.printStackTrace()
             }
@@ -89,9 +89,9 @@ class RecipeViewModel(
         viewModelScope.launch {
             try {
                 recipeDao.updateRecipe(recipe)
-                loadUserRecipes() // Recarregar receitas após atualização
+                loadUserRecipes()
             } catch (e: Exception) {
-                // Lidar com erro de atualização
+
             }
         }
     }
@@ -103,7 +103,7 @@ class RecipeViewModel(
                 recipeDao.deleteRecipe(recipe)
                 loadUserRecipes() // Recarregar receitas após remoção
             } catch (e: Exception) {
-                // Lidar com erro de remoção
+
             }
         }
     }
@@ -114,7 +114,7 @@ class RecipeViewModel(
             try {
                 _recipes.value = recipeDao.searchRecipes(query)
             } catch (e: Exception) {
-                // Lidar com erro de busca
+
             }
         }
     }

@@ -60,7 +60,7 @@ fun RecipeDetailScreen(
                     .padding(padding)
                     .background(
                         brush = Brush.verticalGradient(
-                            colors = listOf(Color(0xFF0072FF), Color(0xFF00C6FF)) // Gradiente azul similar às outras telas
+                            colors = listOf(Color(0xFF6D96C9), Color(0xFF5790A1))
                         )
                     )
             ) {
@@ -117,7 +117,7 @@ fun RecipeDetailScreen(
                     .fillMaxSize()
                     .background(
                         brush = Brush.verticalGradient(
-                            colors = listOf(Color(0xFF507BAF), Color(0xFF4689A1)) // Gradiente azul similar às outras telas
+                            colors = listOf(Color(0xFF6D96C9), Color(0xFF5790A1))
                         )
                     )
             ) {
@@ -153,7 +153,7 @@ fun RecipeHeader(recipe: Recipe) {
                 fontWeight = FontWeight.Bold
             )
             Text(
-                text = "A melhor receita para ti ${recipe.category.ifBlank { "everyone" }}",
+                text = "A melhor receita para ti para a/o ${recipe.category.ifBlank { "everyone" }}",
                 style = MaterialTheme.typography.bodyMedium,
                 color = Color.White.copy(alpha = 0.8f)
             )
